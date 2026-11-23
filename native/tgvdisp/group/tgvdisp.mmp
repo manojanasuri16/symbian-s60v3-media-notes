@@ -1,0 +1,20 @@
+// tgvdisp.pyd: shows the frames of tgvideo.exe (global chunk) in a PyS60 graphics.Image, see tgvdisp.cpp.
+// Loaded in the Python app process: it must not need more capabilities than the app has.
+TARGET        tgvdisp.pyd
+TARGETTYPE    dll
+UID           0x1000008d 0xE7A3D5EA
+CAPABILITY    NetworkServices LocalServices ReadUserData WriteUserData UserEnvironment
+VENDORID      0
+
+NOSTRICTDEF
+EPOCALLOWDLLDATA
+
+SYSTEMINCLUDE \epoc32\include
+SYSTEMINCLUDE \epoc32\include\libc
+SYSTEMINCLUDE \epoc32\include\python
+USERINCLUDE   ..\..\tgvideo ..
+
+SOURCEPATH    ..
+SOURCE        tgvdisp.cpp
+
+LIBRARY       python222.lib euser.lib estlib.lib fbscli.lib bitgdi.lib

@@ -1,0 +1,16 @@
+// tgvbench.exe: live H.264 benchmark (encode/decode/camera/CPU headroom), see vidbench.cpp
+TARGET        tgvbench.exe
+TARGETTYPE    exe
+UID           0x0 0xE7A3D5E7
+CAPABILITY    MultimediaDD ReadDeviceData WriteDeviceData UserEnvironment LocalServices NetworkServices ReadUserData WriteUserData
+VENDORID      0
+EPOCSTACKSIZE 0x10000
+EPOCHEAPSIZE  0x40000 0x800000
+
+SYSTEMINCLUDE \epoc32\include
+USERINCLUDE   ..
+
+SOURCEPATH    ..
+SOURCE        vidbench.cpp
+
+LIBRARY       euser.lib efsrv.lib devvideo.lib ecam.lib mmfcontrollerframework.lib bafl.lib hal.lib fbscli.lib

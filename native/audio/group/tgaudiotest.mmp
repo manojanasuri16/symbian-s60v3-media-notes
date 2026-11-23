@@ -1,0 +1,15 @@
+// tgaudiotest.exe: echo test in its own process with MultimediaDD (see audiotest.cpp)
+TARGET        tgaudiotest.exe
+TARGETTYPE    exe
+UID           0x0 0xE7A3D5C6
+CAPABILITY    MultimediaDD ReadDeviceData WriteDeviceData UserEnvironment
+VENDORID      0
+EPOCSTACKSIZE 0x5000
+
+SYSTEMINCLUDE \epoc32\include
+USERINCLUDE   ..
+
+SOURCEPATH    ..
+SOURCE        audiotest.cpp loopback.cpp
+
+LIBRARY       euser.lib efsrv.lib mediaclientaudioinputstream.lib mediaclientaudiostream.lib audiooutputrouting.lib

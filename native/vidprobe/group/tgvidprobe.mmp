@@ -1,0 +1,16 @@
+// tgvprobe.exe (was tgvidprobe.exe): reports video hardware/codecs/camera of the phone (see vidprobe.cpp)
+TARGET        tgvprobe.exe
+TARGETTYPE    exe
+UID           0x0 0xE7A3D5E6
+CAPABILITY    MultimediaDD ReadDeviceData WriteDeviceData UserEnvironment LocalServices NetworkServices ReadUserData WriteUserData
+VENDORID      0
+EPOCSTACKSIZE 0x5000
+EPOCHEAPSIZE  0x10000 0x1000000
+
+SYSTEMINCLUDE \epoc32\include
+USERINCLUDE   ..
+
+SOURCEPATH    ..
+SOURCE        vidprobe.cpp
+
+LIBRARY       euser.lib efsrv.lib devvideo.lib ecam.lib mmfcontrollerframework.lib bafl.lib hal.lib ws32.lib bitgdi.lib fbscli.lib

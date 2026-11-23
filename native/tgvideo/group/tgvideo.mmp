@@ -1,0 +1,16 @@
+// tgvideo.exe: video helper for RetroTele (camera -> H.264 encode -> decode -> shared chunk), see tgvideo.cpp
+TARGET        tgvideo.exe
+TARGETTYPE    exe
+UID           0x0 0xE7A3D5E9
+CAPABILITY    MultimediaDD ReadDeviceData WriteDeviceData UserEnvironment LocalServices NetworkServices ReadUserData WriteUserData
+VENDORID      0
+EPOCSTACKSIZE 0x10000
+EPOCHEAPSIZE  0x40000 0x800000
+
+SYSTEMINCLUDE \epoc32\include
+USERINCLUDE   ..
+
+SOURCEPATH    ..
+SOURCE        tgvideo.cpp
+
+LIBRARY       euser.lib efsrv.lib devvideo.lib ecam.lib mmfcontrollerframework.lib bafl.lib hal.lib fbscli.lib esock.lib insock.lib
