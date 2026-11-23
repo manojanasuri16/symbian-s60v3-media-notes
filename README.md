@@ -83,3 +83,7 @@ MIT (see [LICENSE](LICENSE)). `native/vidbench/clip_data.h` and `native/tgvideo/
 for the decoder test; the bitstream has no personal content. Nokia, Symbian, S60 and ECam/DevVideo
 are trademarks or property of their owners; this repo contains no Nokia SDK code, only programs that
 `#include` the SDK headers you install yourself.
+
+## Part of the RetroArchive ecosystem
+
+Extracted from [RetroTele](https://github.com/manojanasuri16/RetroTele). All apps, guides and open-source repos are listed on [RetroArchive](https://manojanasuri16.github.io/RetroArchive/) (see the [Open source page](https://manojanasuri16.github.io/RetroArchive/opensource/)); the build toolchain is [symbian-s60v3-toolchain](https://github.com/manojanasuri16/symbian-s60v3-toolchain).
